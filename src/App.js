@@ -4,7 +4,7 @@ import Navbar from './layout/Navbar'
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 import kapasok from "./dashboard/kapasok";
-import osszeskapas from "./osszeskapas";
+import osszeskapas from "./dashboard/osszeskapas";
 import sajatkapasok from "./dashboard/sajatkapasok";
 
 

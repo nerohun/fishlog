@@ -6,12 +6,12 @@ const Navbar =()=>{
     return(
         <nav className="nav-wrapper grey darken-3">
             <div className="container">
-                <Link to="/" className="brand-logo"> Home </Link>
+                <Link to="/" className="brand-logo"><img src={"fishlogLogoWhite.png"} alt="FishLog" width={55}/> </Link>
                 <Links/>
 
             </div>
         </nav>
     )
-}
+};
 
 export default Navbar;

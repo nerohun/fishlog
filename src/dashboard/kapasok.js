@@ -1,13 +1,16 @@
 import React, {Component} from "react";
+import'../App.css';
 
-import osszeskapas from "../osszeskapas";
 class kapasok extends Component{
 
 
     render() {
         return(
         <div>
-            <p>Üdv a FishLog-on!</p>
+            <h1>Üdv a Fishlogon!</h1>
+
+            <h3>Meg tudod nézni az összes horgász kifogott halait.</h3>
+            <h3>Saját Kifogott Halaim  menüpont alatt rögzítheted saját fogásaidat!</h3>
         </div>
         )
     }

@@ -1,61 +1,24 @@
 import React, {Component} from "react";
-import Faker from "faker";
+import SajathalakList from "../components/SajathalakList";
+import SajathalakForm from "../components/SajathalakForm";
+
 
 class sajatkapasok extends Component{
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            users: [],
-        }
-    }
-
-    componentWillMount() {
-        for (let i = 0; i < 10; i++) {
-            const user = {
-                name: "Bot Horgász",
-                location: "Debrecen",
-                fish: Faker.random.arrayElement(["Ponty","Keszeg","Tőkehal","Cápa","Csuka"]),
-                weight: Faker.random.number(32)
-
-            }
-            this.setState(prevState => ({
-                users: [...prevState.users, user],
-            }))
-        }
-    }
-
-    renderUsers(user) {
-        return (
-            <tr>
-
-                <td> {user.name}</td>
-                <td> {user.location}</td>
-                <td> {user.fish}</td>
-                <td> {user.weight}</td>
-
-
-            </tr>
-        )
-    }
-
-
     render() {
-        return (<table >
-            <thead>
-            <tr>
-                <th>Név</th>
-                <th>Helyszín</th>
-                <th>Hal típusa</th>
-                <th>Hal Súlya (KG)</th>
-            </tr>
-            </thead>
-            <tbody>
-            {this.state.users.map(user => this.renderUsers(user))}
-            </tbody></table>
-        )}
+        return (
 
+            <div className="App">
+                <div className="row">
+                    <div className="col-md-12"><SajathalakForm/></div>
+                </div>
+                <div className="row">
+                    <div className="col-md-9"><SajathalakList/></div>
+                </div>
+            </div>
 
-}
+        );
+    }
 
-export default sajatkapasok;
+        }
+    export default sajatkapasok;
