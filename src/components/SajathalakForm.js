@@ -10,8 +10,8 @@ class SajathalakForm extends React.Component{
         this.state={
             name : '',
             location:"",
-            description : '',
-            price : 0
+            fish : '',
+            weight : 0
         };
     }
 
@@ -43,9 +43,9 @@ class SajathalakForm extends React.Component{
                     <td>Hal Típusa</td>
                     <td><input
                         type="text"
-                        value={this.state.description}
+                        value={this.state.fish}
                         onChange={(e)=>{
-                            this.setState({description : e.target.value});
+                            this.setState({fish : e.target.value});
                         }}
                     /></td>
                 </tr>
@@ -53,9 +53,9 @@ class SajathalakForm extends React.Component{
                     <td>Hal Súlya (KG)</td>
                     <td><input
                         type="number"
-                        value={this.state.price}
+                        value={this.state.weight}
                         onChange={(e)=>{
-                            this.setState({price : e.target.value});
+                            this.setState({weight : e.target.value});
                         }}
                     /></td>
                 </tr>

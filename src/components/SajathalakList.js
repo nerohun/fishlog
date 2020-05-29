@@ -1,6 +1,7 @@
 import React from 'react'
 import shoppingCart from '../store/Sajathalak'
 import ShoppingCartActions from "../actions/SajathalakActions";
+import axios from "axios";
 
 class SajathalakList extends React.Component{
 
@@ -14,10 +15,17 @@ class SajathalakList extends React.Component{
     onChangeOfShoppingCart(){
         this.setState({cart : shoppingCart._items})
     }
-
     componentDidMount() {
-        shoppingCart.addChangeListener(this.onChangeOfShoppingCart);
+        axios.get('http://localhost:3001/catches?name=Teszt Elek').then((res) => {
+            const dat = res.data;
+            console.log(res.data);
+            this.setState({ cart: dat });
+        });
+
+
     }
+
+
 
     componentWillUnmount() {
         shoppingCart.removeChangeListener(this.onChangeOfShoppingCart);
@@ -35,6 +43,7 @@ class SajathalakList extends React.Component{
                     <th>Hal típusa</th>
                     <th>Hal súlya (KG)</th>
 
+
                 </tr>
                 </thead>
                 <tbody>
@@ -44,16 +53,9 @@ class SajathalakList extends React.Component{
                             <tr key={item.id}>
                                 <td>{item.name}</td>
                                 <td>{item.location}</td>
-                                <td>{item.description}</td>
-                                <td>{item.price}</td>
-                                <td>
-                                    <button
-                                        className="btn btn-danger"
-                                        onClick={()=>{
-                                            ShoppingCartActions.removeItemById(item.id);
-                                        }}
-                                    >Törlés</button>
-                                </td>
+                                <td>{item.fish}</td>
+                                <td>{item.weight}</td>
+
                             </tr>
                         );
                     })

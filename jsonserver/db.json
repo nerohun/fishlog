@@ -1,0 +1,25 @@
+{
+  "catches": [
+    {
+      "id": "1",
+      "name": "Teszt Elek",
+      "location": "Tisza-Tó",
+      "fish": "Csuka",
+      "weight": "4"
+    },
+    {
+      "id": "2",
+      "name": "Kandisz Nóra",
+      "location": "Balaton",
+      "fish": "Ponty",
+      "weight": "6"
+    },
+    {
+      "name": "Teszt Elek",
+      "location": "asd",
+      "fish": "asd",
+      "weight": "12",
+      "id": 12
+    }
+  ]
+}

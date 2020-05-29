@@ -1,48 +1,27 @@
 import React, { Component } from 'react'
-import '../App.css';
-import Faker from 'faker';
+import axios from 'axios'
 
 class osszeskapas extends Component {
 
 
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
-            users: [],
+            cart: []
         }
     }
-
-    componentWillMount() {
-        for (let i = 0; i < 25; i++) {
-            const user = {
-                name: Faker.name.findName(),
-                location: Faker.address.city(),
-                fish: Faker.random.arrayElement(["Ponty","Keszeg","Tőkehal","Cápa","Csuka"]),
-                weight: Faker.random.number(32)
-
-            };
-            this.setState(prevState => ({
-                users: [...prevState.users, user],
-            }))
-        }
-    }
-
-    renderUsers(user) {
-        return (
-            <tr>
-
-                <td> {user.name}</td>
-                <td> {user.location}</td>
-                <td> {user.fish}</td>
-                <td> {user.weight}</td>
+    componentDidMount() {
+        axios.get('http://localhost:3001/catches').then((res) => {
+            const dat = res.data;
+            console.log(res.data);
+            this.setState({ cart: dat });
+        });
 
 
-            </tr>
-        )
     }
 
     render() {
-        return <table >
+        return <table>
             <thead>
             <tr>
                 <th>Név</th>
@@ -52,8 +31,19 @@ class osszeskapas extends Component {
             </tr>
             </thead>
             <tbody>
-            {this.state.users.map(user => this.renderUsers(user))}
+            {this.state.cart.map(persons => <tr >
+
+                <td key={persons.id}> {persons.name}</td>
+                <td> {persons.location}</td>
+                <td> {persons.fish}</td>
+                <td > {persons.weight}</td>
+
+
+            </tr>)}
             </tbody></table>
+
+
+
     }
 }
 

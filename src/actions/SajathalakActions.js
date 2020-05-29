@@ -1,4 +1,6 @@
 import dispatcher from '../AppDispatcher'
+import axios from "axios";
+import shoppingCart from "../store/Sajathalak";
 
 class SajathalakActions {
 
@@ -6,15 +8,18 @@ class SajathalakActions {
         dispatcher.handleViewAction({
             commandType : 'INSERT_ITEM',
             item : item
+
+        });
+        axios({
+            method: 'post',
+            url: 'http://localhost:3001/catches',
+            data: item,
         });
     }
 
-    removeItemById(id){
-        dispatcher.handleViewAction({
-            commandType : 'REMOVE_BY_ID',
-            id : id
-        })
-    }
+
+
+
 
 }
 

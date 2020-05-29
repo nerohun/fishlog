@@ -1,5 +1,6 @@
 import EventEmitter from 'events'
 import dispatcher from '../AppDispatcher'
+import axios from "axios"
 
 class Sajathalak extends EventEmitter{
 
@@ -23,9 +24,11 @@ const shoppingCart = new Sajathalak();
 dispatcher.register((action)=>{
     if(action.command.commandType === 'INSERT_ITEM'){
         let item = action.command.item;
-        item.id = Math.round(Math.random()*1000);
+        item.id = 12;
         shoppingCart._items.push(item);
         shoppingCart.emitChange();
+
+
     }
     if(action.command.commandType === 'REMOVE_BY_ID'){
         shoppingCart._items = shoppingCart._items.filter((item)=>{

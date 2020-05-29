@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import'../App.css';
+import Test from "../components/Test";
 
 class kapasok extends Component{
 
@@ -11,7 +12,9 @@ class kapasok extends Component{
 
             <h3>Meg tudod nézni az összes horgász kifogott halait.</h3>
             <h3>Saját Kifogott Halaim  menüpont alatt rögzítheted saját fogásaidat!</h3>
+
         </div>
+
         )
     }
 
