@@ -31,9 +31,9 @@ class osszeskapas extends Component {
             </tr>
             </thead>
             <tbody>
-            {this.state.cart.map(persons => <tr >
+            {this.state.cart.map(persons => <tr key={persons.id}>
 
-                <td key={persons.id}> {persons.name}</td>
+                <td > {persons.name}</td>
                 <td> {persons.location}</td>
                 <td> {persons.fish}</td>
                 <td > {persons.weight}</td>

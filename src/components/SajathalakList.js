@@ -1,7 +1,5 @@
 import React from 'react'
 import shoppingCart from '../store/Sajathalak'
-import ShoppingCartActions from "../actions/SajathalakActions";
-import axios from "axios";
 
 class SajathalakList extends React.Component{
 
@@ -15,7 +13,7 @@ class SajathalakList extends React.Component{
     onChangeOfShoppingCart(){
         this.setState({cart : shoppingCart._items})
     }
-    componentDidMount() {
+    /**componentDidMount() {
         axios.get('http://localhost:3001/catches?name=Teszt Elek').then((res) => {
             const dat = res.data;
             console.log(res.data);
@@ -23,8 +21,10 @@ class SajathalakList extends React.Component{
         });
 
 
+    }*/
+    componentDidMount() {
+        shoppingCart.addChangeListener(this.onChangeOfShoppingCart);
     }
-
 
 
     componentWillUnmount() {

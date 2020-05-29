@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './App.css';
 import Navbar from './layout/Navbar'
 import {BrowserRouter, Switch, Route} from "react-router-dom";
-import Test from "./components/Test";
 
 import kapasok from "./dashboard/kapasok";
 import osszeskapas from "./dashboard/osszeskapas";
