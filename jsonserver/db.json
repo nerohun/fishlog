@@ -20,6 +20,34 @@
       "fish": "asd",
       "weight": "12",
       "id": 12
+    },
+    {
+      "name": "Teszt Elek",
+      "location": "Balaton",
+      "fish": "Keszeg",
+      "weight": "12",
+      "id": 24
+    },
+    {
+      "name": "Teszt Elek",
+      "location": "Duna",
+      "fish": "Ponty",
+      "weight": "2",
+      "id": 68
+    },
+    {
+      "name": "Pista",
+      "location": "Keszpi Tenger",
+      "fish": "Cápa",
+      "weight": "54",
+      "id": 706
+    },
+    {
+      "name": "Kovács Ádám",
+      "location": "Földközi tenger",
+      "fish": "Bálna",
+      "weight": "87",
+      "id": 588
     }
   ]
 }

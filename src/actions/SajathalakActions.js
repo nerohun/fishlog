@@ -1,4 +1,4 @@
-import dispatcher from '../AppDispatcher'
+/**import dispatcher from '../AppDispatcher'
 
 class SajathalakActions {
 
@@ -19,8 +19,8 @@ class SajathalakActions {
 }
 
 export default new SajathalakActions();
-
-/**import dispatcher from '../AppDispatcher'
+*/
+import dispatcher from '../AppDispatcher'
 import axios from "axios";
 import shoppingCart from "../store/Sajathalak";
 
@@ -46,4 +46,4 @@ class SajathalakActions {
 }
 
 export default new SajathalakActions();
-*/
+
